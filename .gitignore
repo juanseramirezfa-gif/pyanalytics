@@ -1,0 +1,30 @@
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Resultados generados
+outputs/*.html
+outputs/*.png
+outputs/*.csv
+outputs/*.xlsx
+outputs/graficos/
+
+# Datos de ejemplo generados
+examples/*.csv
+examples/*.xlsx
+examples/*.parquet
+
+# Sistema
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

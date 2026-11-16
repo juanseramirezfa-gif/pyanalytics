@@ -1,0 +1,24 @@
+# pyanalytics - extras opcionales (escalado y motores alternativos)
+# Instalar con:  pip install -r requirements-optional.txt
+
+# escalado fuera de memoria (fuente 9 y 10 del notebook)
+dask[dataframe]>=2024.5
+distributed>=2024.5
+
+# motor columnar mas rapido que pandas (fuente 19)
+polars>=1.0
+
+# pronostico de series temporales (fuente 3)
+prophet>=1.1
+darts>=0.30
+
+# interpretabilidad de modelos (fuente 11)
+shap>=0.45
+lime>=0.2
+
+# modelos bayesianos (fuente 7 y 13)
+pymc>=5.15
+arviz>=0.18
+
+# perfilado exploratorio interactivo y pipelines automaticos (integracion skrub)
+skrub>=0.11

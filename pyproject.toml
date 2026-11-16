@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyanalytics"
+version = "0.1.0"
+description = "Caja de herramientas para analizar, limpiar, normalizar y visualizar datos con Python"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Juan Sebastian Ramirez Fagua" }]
+keywords = ["data-analysis", "eda", "cleaning", "normalization", "visualization", "time-series", "machine-learning"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+  "pandas>=2.2",
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "scikit-learn>=1.4",
+  "matplotlib>=3.8",
+  "seaborn>=0.13",
+  "plotly>=5.20",
+  "statsmodels>=0.14",
+  "openpyxl>=3.1",
+  "XlsxWriter>=3.2",
+  "pyarrow>=16.0",
+  "jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.52", "tabulate>=0.9"]
+dev = ["pytest>=8.0", "pytest-cov>=5.0"]
+scale = ["dask[dataframe]>=2024.5", "polars>=1.0"]
+skrub = ["skrub>=0.11"]
+
+[project.scripts]
+pyanalytics = "pyanalytics.cli:main"
+
+[tool.setuptools]
+packages = ["pyanalytics"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --tb=short"
+filterwarnings = [
+  "ignore::FutureWarning",
+  "ignore::UserWarning",
+  "ignore::DeprecationWarning",
+  "ignore::pandas.errors.Pandas4Warning",
+]

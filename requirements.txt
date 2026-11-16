@@ -1,0 +1,25 @@
+# pyanalytics - dependencias principales
+pandas>=2.2
+numpy>=1.26
+scipy>=1.11
+scikit-learn>=1.4
+
+# visualizacion
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.20
+
+# series temporales
+statsmodels>=0.14
+
+# interfaz web
+streamlit>=1.52
+
+# entrada / salida de formatos
+openpyxl>=3.1
+XlsxWriter>=3.2
+pyarrow>=16.0
+
+# informes
+jinja2>=3.1
+tabulate>=0.9
